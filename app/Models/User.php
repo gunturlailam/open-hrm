@@ -29,4 +29,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'perusahaan_id', // Kolom penghubung SaaS perusahaan
+        'peran', // admin, hr, karyawan
+        'gaji_pokok_awal', // Gaji dasar karyawan
+    ];
 }
